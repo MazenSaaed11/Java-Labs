@@ -1,6 +1,6 @@
 package Lab1;
 
-public class TestCircle {
+public class exercise1 {
     public static void main(String[] args) {
 
         // rectangle with width = 4 and height = 5.5
