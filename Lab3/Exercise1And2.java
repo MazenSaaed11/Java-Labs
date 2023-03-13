@@ -69,30 +69,47 @@ class Vector {
         return new Vector(v1.x - v2.x, v1.y - v2.y);
     }
 }
-class Line {
+
+class Point {
     private double x;
     private double y;
-    private Vector direc;
 
-    Line(double x, double y, Vector v) {
+    Point(Point p) {
+        x = p.x;
+        y = p.y;
+    }
+
+    Point(double x, double y) {
         this.x = x;
         this.y = y;
+    }
+
+    void print() {
+        System.out.println("x is : " + x);
+        System.out.println("y is : " + y);
+    }
+}
+class Line {
+
+    private Vector direc;
+    private Point p;
+
+    Line(Point pp, Vector v) {
+        p = new Point(pp);
         direc = new Vector(v.getX(), v.getY());
     }
 
     Line(double x1, double y1, double x2, double y2) {
-        this.x = x1;
-        this.y = y1;
+        p = new Point(x1, y1);
         direc = new Vector((x2 - x1), (y2 - y1));
     }
 
     Line() {
-        this(0, 0, new Vector(0, 0));
+        this(new Point(0.0, 0.0), new Vector(0.0, 0.0));
     }
 
     void print() {
-        System.out.println("Position is : " + "(" + x + " , " + y + ")");
-        System.out.print("Direction is : ");
+        p.print();
         direc.print_direc();
     }
 }
