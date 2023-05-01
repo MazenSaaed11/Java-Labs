@@ -3,7 +3,7 @@
 This repo contains my solutions for the labs of Advanced Programming with java course.
 junior Computer and Systems Enginnering - Ain Shams university.
 
-## Lab 1 :  [**Lab1**](blob/tree/main/Lab1) 
+## Lab 1 :  [**Lab1**](https://github.com/MazenSaaed11/Java-Labs/tree/main/Lab1) 
 
 
 
